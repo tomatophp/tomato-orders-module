@@ -4,7 +4,7 @@ namespace Modules\TomatoOrders\App\Services\Traits;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
-use TomatoPHP\TomatoEcommerce\Models\Cart;
+use Modules\TomatoEcommerce\App\Models\Cart;
 use Modules\TomatoOrders\App\Models\Order;
 use Modules\TomatoOrders\App\Models\ShippingPrice;
 

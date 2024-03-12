@@ -3,7 +3,7 @@
 namespace Modules\TomatoOrders\App\Services\Traits;
 
 use Illuminate\Http\Request;
-use TomatoPHP\TomatoInventory\Facades\TomatoInventory;
+use Modules\TomatoInventory\App\Facades\TomatoInventory;
 
 trait InventoryCheck
 {

@@ -3,7 +3,7 @@
 namespace Modules\TomatoOrders\App\Services\Traits;
 
 use Illuminate\Http\Request;
-use TomatoPHP\TomatoInventory\Facades\TomatoInventory;
+use Modules\TomatoInventory\App\Facades\TomatoInventory;
 use Modules\TomatoOrders\App\Models\Order;
 use Modules\TomatoProducts\App\Models\Product;
 

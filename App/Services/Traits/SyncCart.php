@@ -5,7 +5,7 @@ namespace Modules\TomatoOrders\App\Services\Traits;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
-use TomatoPHP\TomatoEcommerce\Models\Cart;
+use Modules\TomatoEcommerce\App\Models\Cart;
 
 trait SyncCart
 {

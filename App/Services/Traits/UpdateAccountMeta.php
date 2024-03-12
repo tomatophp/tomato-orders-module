@@ -3,7 +3,7 @@
 namespace Modules\TomatoOrders\App\Services\Traits;
 
 use Illuminate\Http\Request;
-use TomatoPHP\TomatoCrm\Models\Location;
+use Modules\TomatoCrm\App\Models\Location;
 
 trait UpdateAccountMeta
 {
