@@ -4,7 +4,7 @@
     </x-slot:header>
     <x-slot:buttons>
         <x-tomato-admin-button :modal="true" :href="route('admin.shipping-vendors.create')" type="link">
-            {{trans('tomato-admin::global.crud.create-new')}} {{__('Shipping Vendor')}}
+            {{trans('tomato-admin::global.crud.create-new')}} {{__('Shipping vendor')}}
         </x-tomato-admin-button>
     </x-slot:buttons>
 

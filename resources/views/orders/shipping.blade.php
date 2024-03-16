@@ -7,8 +7,8 @@
             remote-url="{{route('admin.shipping-vendors.api')}}"
             remote-root="data"
             name="shipping_vendor_id"
-            label="{{__('Shipping Vendor')}}"
-            placeholder="{{__('Shipping Vendor')}}"
+            label="{{__('Shipping vendor')}}"
+            placeholder="{{__('Shipping vendor')}}"
             option-label="name"
             option-value="id"
         />

@@ -58,7 +58,7 @@ class OrderMetaTable extends AbstractTable
             ->bulkAction(
                 label: trans('tomato-admin::global.crud.delete'),
                 each: fn (\Modules\TomatoOrders\App\Models\OrderMeta $model) => $model->delete(),
-                after: fn () => Toast::danger(__('OrderMeta Has Been Deleted'))->autoDismiss(2),
+                after: fn () => Toast::danger(__('Order Meta Has Been Deleted'))->autoDismiss(2),
                 confirm: true
             )
             ->defaultSort('id', 'desc')

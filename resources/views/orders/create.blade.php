@@ -20,7 +20,11 @@
         <div class="flex justify-between xl:gap-60 lg:gap-48 md:gap-16 sm:gap-8 sm:flex-row flex-col gap-4">
             <div class="w-full">
                 <div class="my-4">
-                    <img src="{{setting('site_logo')}}" alt="{{setting('site_name')}}" class="h-12 ">
+                    @if(setting('site_logo'))
+                        <img src="{{setting('site_logo')}}" alt="{{setting('site_name')}}" class="h-12">
+                    @else
+                        <h2 class="text-xl md:text-3xl">{{setting('site_name')}}</h2>
+                    @endif
                 </div>
                 <div class="flex flex-col">
                     <div>
@@ -163,14 +167,14 @@
                         <x-splade-input
                             class="col-span-12 lg:col-span-1"
                             type="number"
-                            placeholder="Price"
+                            placeholder="{{ __('Price') }}"
                             v-model="items.main[key].price"
                             @input="items.updateTotal(key)"
                         />
                         <x-splade-input
                             class="col-span-12 lg:col-span-1"
                             type="number"
-                            placeholder="Item Name"
+                            placeholder="{{ __('Discount') }}"
                             v-model="items.main[key].discount"
                             @input="items.updateTotal(key)"
                         />
@@ -178,14 +182,14 @@
                             disabled
                             class="col-span-12 lg:col-span-1"
                             type="number"
-                            placeholder="Tax"
+                            placeholder="{{ __('Tax') }}"
                             v-model="items.main[key].tax"
                             @input="items.updateTotal(key, data.discount_type)"
                         />
                         <x-splade-input
                             class="col-span-12 lg:col-span-1"
                             type="number"
-                            placeholder="QTY"
+                            placeholder="{{ __('QTY') }}"
                             v-model="items.main[key].qty"
                             @input="items.updateTotal(key)"
                         />
@@ -193,7 +197,7 @@
                             disabled
                             class="col-span-12 lg:col-span-2"
                             type="text"
-                            placeholder="Item Name"
+                            placeholder="{{ __('Total') }}"
                             v-model="items.main[key].total"
                             @input="items.updateTotal(key)"
                         />

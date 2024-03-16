@@ -105,7 +105,7 @@ class ShippingVendorTable extends AbstractTable
                 $table->bulkAction(
                     label: trans('tomato-admin::global.crud.delete'),
                     each: fn (\Modules\TomatoOrders\App\Models\ShippingVendor $model) => $model->delete(),
-                    after: fn () => Toast::danger(__('ShippingVendor Has Been Deleted'))->autoDismiss(2),
+                    after: fn () => Toast::danger(__('Shipping Vendor Has Been Deleted'))->autoDismiss(2),
                     confirm: true
                 );
             }
@@ -114,7 +114,7 @@ class ShippingVendorTable extends AbstractTable
             $table->bulkAction(
                 label: trans('tomato-admin::global.crud.delete'),
                 each: fn (\Modules\TomatoOrders\App\Models\ShippingVendor $model) => $model->delete(),
-                after: fn () => Toast::danger(__('ShippingVendor Has Been Deleted'))->autoDismiss(2),
+                after: fn () => Toast::danger(__('Shipping Vendor Has Been Deleted'))->autoDismiss(2),
                 confirm: true
             );
             $table->export();

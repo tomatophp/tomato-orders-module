@@ -64,7 +64,7 @@ class OrdersItemController extends Controller
             request: $request,
             model: \Modules\TomatoOrders\App\Models\OrdersItem::class,
             validation: [
-                            'order_id' => 'required|exists:orders,id',
+            'order_id' => 'required|exists:orders,id',
             'account_id' => 'nullable|exists:accounts,id',
             'product_id' => 'nullable|exists:products,id',
             'refund_id' => 'nullable',
@@ -81,7 +81,7 @@ class OrdersItemController extends Controller
             'is_returned' => 'nullable',
             'options' => 'nullable'
             ],
-            message: __('OrdersItem updated successfully'),
+            message: __('Orders Item created successfully'),
             redirect: 'admin.orders-items.index',
         );
 
@@ -127,7 +127,7 @@ class OrdersItemController extends Controller
             request: $request,
             model: $model,
             validation: [
-                            'order_id' => 'sometimes|exists:orders,id',
+            'order_id' => 'sometimes|exists:orders,id',
             'account_id' => 'nullable|exists:accounts,id',
             'product_id' => 'nullable|exists:products,id',
             'refund_id' => 'nullable',
@@ -144,7 +144,7 @@ class OrdersItemController extends Controller
             'is_returned' => 'nullable',
             'options' => 'nullable'
             ],
-            message: __('OrdersItem updated successfully'),
+            message: __('Orders Item updated successfully'),
             redirect: 'admin.orders-items.index',
         );
 
@@ -163,7 +163,7 @@ class OrdersItemController extends Controller
     {
         $response = Tomato::destroy(
             model: $model,
-            message: __('OrdersItem deleted successfully'),
+            message: __('Orders Item deleted successfully'),
             redirect: 'admin.orders-items.index',
         );
 

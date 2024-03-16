@@ -109,7 +109,7 @@ class ShippingPriceTable extends AbstractTable
                 $table->bulkAction(
                     label: trans('tomato-admin::global.crud.delete'),
                     each: fn (\Modules\TomatoOrders\App\Models\ShippingPrice $model) => $model->delete(),
-                    after: fn () => Toast::danger(__('ShippingPrice Has Been Deleted'))->autoDismiss(2),
+                    after: fn () => Toast::danger(__('Shipping Price Has Been Deleted'))->autoDismiss(2),
                     confirm: true
                 );
             }
@@ -118,7 +118,7 @@ class ShippingPriceTable extends AbstractTable
             $table->bulkAction(
                 label: trans('tomato-admin::global.crud.delete'),
                 each: fn (\Modules\TomatoOrders\App\Models\ShippingPrice $model) => $model->delete(),
-                after: fn () => Toast::danger(__('ShippingPrice Has Been Deleted'))->autoDismiss(2),
+                after: fn () => Toast::danger(__('Shipping Price Has Been Deleted'))->autoDismiss(2),
                 confirm: true
             );
             $table->export();
