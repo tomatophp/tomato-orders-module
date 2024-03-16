@@ -64,7 +64,7 @@ class ShippingPriceController extends Controller
             request: $request,
             model: \Modules\TomatoOrders\App\Models\ShippingPrice::class,
             validation: [
-                            'shipping_vendor_id' => 'nullable|exists:shipping_vendors,id',
+            'shipping_vendor_id' => 'nullable|exists:shipping_vendors,id',
             'delivery_id' => 'nullable|exists:deliveries,id',
             'country_id' => 'nullable|exists:countries,id',
             'city_id' => 'nullable|exists:cities,id',
@@ -72,7 +72,7 @@ class ShippingPriceController extends Controller
             'type' => 'nullable|max:255|string',
             'price' => 'nullable'
             ],
-            message: __('ShippingPrice updated successfully'),
+            message: __('Shipping Price created successfully'),
             redirect: 'admin.shipping-prices.index',
         );
 
@@ -118,7 +118,7 @@ class ShippingPriceController extends Controller
             request: $request,
             model: $model,
             validation: [
-                            'shipping_vendor_id' => 'nullable|exists:shipping_vendors,id',
+            'shipping_vendor_id' => 'nullable|exists:shipping_vendors,id',
             'delivery_id' => 'nullable|exists:deliveries,id',
             'country_id' => 'nullable|exists:countries,id',
             'city_id' => 'nullable|exists:cities,id',
@@ -126,7 +126,7 @@ class ShippingPriceController extends Controller
             'type' => 'nullable|max:255|string',
             'price' => 'nullable'
             ],
-            message: __('ShippingPrice updated successfully'),
+            message: __('Shipping Price updated successfully'),
             redirect: 'admin.shipping-prices.index',
         );
 
@@ -145,7 +145,7 @@ class ShippingPriceController extends Controller
     {
         $response = Tomato::destroy(
             model: $model,
-            message: __('ShippingPrice deleted successfully'),
+            message: __('Shipping Price deleted successfully'),
             redirect: 'admin.shipping-prices.index',
         );
 

@@ -64,13 +64,13 @@ class OrderLogController extends Controller
             request: $request,
             model: \Modules\TomatoOrders\App\Models\OrderLog::class,
             validation: [
-                            'user_id' => 'nullable|exists:users,id',
+            'user_id' => 'nullable|exists:users,id',
             'order_id' => 'required|exists:orders,id',
             'status' => 'nullable|max:255|string',
             'note' => 'required|max:65535',
             'is_closed' => 'nullable'
             ],
-            message: __('OrderLog updated successfully'),
+            message: __('Order Log created successfully'),
             redirect: 'admin.order-logs.index',
         );
 
@@ -116,13 +116,13 @@ class OrderLogController extends Controller
             request: $request,
             model: $model,
             validation: [
-                            'user_id' => 'nullable|exists:users,id',
+            'user_id' => 'nullable|exists:users,id',
             'order_id' => 'sometimes|exists:orders,id',
             'status' => 'nullable|max:255|string',
             'note' => 'sometimes|max:65535',
             'is_closed' => 'nullable'
             ],
-            message: __('OrderLog updated successfully'),
+            message: __('Order Log updated successfully'),
             redirect: 'admin.order-logs.index',
         );
 
@@ -141,7 +141,7 @@ class OrderLogController extends Controller
     {
         $response = Tomato::destroy(
             model: $model,
-            message: __('OrderLog deleted successfully'),
+            message: __('Order Log deleted successfully'),
             redirect: 'admin.order-logs.index',
         );
 

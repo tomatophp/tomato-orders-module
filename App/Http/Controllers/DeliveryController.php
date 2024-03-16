@@ -73,7 +73,7 @@ class DeliveryController extends Controller
                 'address' => 'nullable|max:255|string',
                 'is_activated' => 'nullable'
             ],
-            message: __('Delivery updated successfully'),
+            message: __('Delivery created successfully'),
             redirect: 'admin.deliveries.index',
         );
 

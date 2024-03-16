@@ -64,13 +64,13 @@ class OrderMetaController extends Controller
             request: $request,
             model: \Modules\TomatoOrders\App\Models\OrderMeta::class,
             validation: [
-                            'order_id' => 'required|exists:orders,id',
+            'order_id' => 'required|exists:orders,id',
             'key' => 'required|max:255|string',
             'value' => 'nullable',
             'type' => 'nullable|max:255|string',
             'group' => 'nullable|max:255|string'
             ],
-            message: __('OrderMeta updated successfully'),
+            message: __('Order Meta created successfully'),
             redirect: 'admin.order-metas.index',
         );
 
@@ -116,13 +116,13 @@ class OrderMetaController extends Controller
             request: $request,
             model: $model,
             validation: [
-                            'order_id' => 'sometimes|exists:orders,id',
+            'order_id' => 'sometimes|exists:orders,id',
             'key' => 'sometimes|max:255|string',
             'value' => 'nullable',
             'type' => 'nullable|max:255|string',
             'group' => 'nullable|max:255|string'
             ],
-            message: __('OrderMeta updated successfully'),
+            message: __('Order Meta updated successfully'),
             redirect: 'admin.order-metas.index',
         );
 
@@ -141,7 +141,7 @@ class OrderMetaController extends Controller
     {
         $response = Tomato::destroy(
             model: $model,
-            message: __('OrderMeta deleted successfully'),
+            message: __('Order Meta deleted successfully'),
             redirect: 'admin.order-metas.index',
         );
 

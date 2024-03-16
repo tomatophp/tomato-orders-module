@@ -1,10 +1,14 @@
-<x-tomato-admin-container label="{{trans('tomato-admin::global.crud.view')}} {{__('orders')}} #{{$model->uuid}} | [{{$model->branch?->name}}]">
+<x-tomato-admin-container label="{{trans('tomato-admin::global.crud.view')}} {{__('Orders')}} #{{$model->uuid}} | [{{$model->branch?->name}}]">
     @php $company = \Modules\TomatoBranches\App\Models\Branch::find(setting('ordering_direct_branch'))?->company @endphp
 
     <div class="flex justify-between xl:gap-60 lg:gap-48 md:gap-16 sm:gap-8 sm:flex-row flex-col gap-4">
         <div class="w-full">
-            <div class=" my-4">
-                <img src="{{setting('site_logo')}}" alt="{{setting('site_name')}}" class="h-12 ">
+            <div class="my-4">
+                @if(setting('site_logo'))
+                    <img src="{{setting('site_logo')}}" alt="{{setting('site_name')}}" class="h-12">
+                @else
+                    <h2 class="text-xl md:text-3xl">{{setting('site_name')}}</h2>
+                @endif
             </div>
             <div class="flex flex-col">
                 <div>

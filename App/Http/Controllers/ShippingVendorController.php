@@ -72,7 +72,7 @@ class ShippingVendorController extends Controller
                 'is_activated' => 'nullable',
                 'integration' => 'nullable'
             ],
-            message: __('ShippingVendor updated successfully'),
+            message: __('Shipping Vendor created successfully'),
             redirect: 'admin.shipping-vendors.index',
             hasMedia: true,
             collection: [
@@ -138,7 +138,7 @@ class ShippingVendorController extends Controller
                 'is_activated' => 'nullable',
                 'integration' => 'nullable'
             ],
-            message: __('ShippingVendor updated successfully'),
+            message: __('Shipping Vendor updated successfully'),
             redirect: 'admin.shipping-vendors.index',
             hasMedia: true,
             collection: [
@@ -161,7 +161,7 @@ class ShippingVendorController extends Controller
     {
         $response = Tomato::destroy(
             model: $model,
-            message: __('ShippingVendor deleted successfully'),
+            message: __('Shipping Vendor deleted successfully'),
             redirect: 'admin.shipping-vendors.index',
             hasMedia: true,
             collection: [
